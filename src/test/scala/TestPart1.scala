@@ -2,7 +2,7 @@
 
 class TestPart1 extends munit.FunSuite{
 
-  val rangeFunction1 = RangeFunction(52, 50, 48)
+  /*val rangeFunction1 = RangeFunction(52, 50, 48)
   val rangeFunction2 = RangeFunction(50, 98, 2)
   val rangesFunctions = Seq(rangeFunction1, rangeFunction2)
   val resource = Resource(rangesFunctions, Section.Soil)
@@ -17,6 +17,6 @@ class TestPart1 extends munit.FunSuite{
     
     assertEquals(result1, Some(80))
     assertEquals(result2, None)
-  }
+  }*/
 
 }

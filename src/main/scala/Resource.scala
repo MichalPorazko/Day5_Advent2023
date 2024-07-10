@@ -2,7 +2,6 @@
 
 case class Resource(ranges: Seq[RangeFunction], section: Section)
 
-type RangeFunction = (Int, Int, Int)
 
 enum Section:
   case Seed, Soil, Fertilizer, Water,
@@ -10,7 +9,7 @@ enum Section:
 
 object Resource{
 
-  def mapTheNumber(value: Int, rangeFunction: RangeFunction): Option[Int] =
+  def mapTheNumber(value: Long, rangeFunction: RangeFunction): Option[Long] =
     val (destination, source, size) = rangeFunction
     if value <= (source + destination - 1) && value >= source then
       Some(destination + (value - source))
