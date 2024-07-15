@@ -1,22 +1,115 @@
 
-
 class TestPart1 extends munit.FunSuite{
 
-  /*val rangeFunction1 = RangeFunction(52, 50, 48)
-  val rangeFunction2 = RangeFunction(50, 98, 2)
-  val rangesFunctions = Seq(rangeFunction1, rangeFunction2)
-  val resource = Resource(rangesFunctions, Section.Soil)
 
   test("testing the mapTheNumber method"){
+
+    val rangeFunction1 = RangeFunction(52, 50, 48)
+    val rangeFunction2 = RangeFunction(50, 98, 2)
+    val rangeFunction3 = RangeFunction(0, 11, 42)
     
-    val valueInRange = 78
-    val valueNotInRange = 49
+    val value1 = 78
+    val value2 = 49
+    val value3 = 99
+    val value4 = 100
     
-    val result1 = Resource.mapTheNumber(valueInRange, rangeFunction2)
-    val result2 = Resource.mapTheNumber(valueNotInRange, rangeFunction2)
-    
-    assertEquals(result1, Some(80))
+    val result1 = Resource.mapTheNumber(value1, rangeFunction1)
+    val result2 = Resource.mapTheNumber(value2, rangeFunction2)
+    val result3 = Resource.mapTheNumber(value3, rangeFunction2)
+    val result4 = Resource.mapTheNumber(value4, rangeFunction2)
+
+    assertEquals(result1, Some(80L))
     assertEquals(result2, None)
-  }*/
+    assertEquals(result3, Some(51L))
+    assertEquals(result4, None)
+  }
+
+  test("testing the mapTheNumber method for the fertilizer-to-water map") {
+
+    val rangeFunction1 = RangeFunction(49, 53, 8)
+    val rangeFunction2 = RangeFunction(0, 11, 42)
+    val rangeFunction3 = RangeFunction(42, 0, 7)
+    val rangeFunction4 = RangeFunction(57, 7, 4)
+
+    val value1 = 53
+    val value2 = 49
+    val value3 = 42
+    val value4 = 42
+
+    val result1 = Resource.mapTheNumber(value1, rangeFunction1)
+    val result2 = Resource.mapTheNumber(value2, rangeFunction2)
+    val result3 = Resource.mapTheNumber(value3, rangeFunction3)
+    val result4 = Resource.mapTheNumber(value4, rangeFunction4)
+
+    assertEquals(result1, Some(49L))
+    assertEquals(result2, Some(42L))
+    assertEquals(result3, None)
+    assertEquals(result4, None)
+  }
+
+  test("testing the first transformTheNumber method"){
+    val rangeFunction1 = RangeFunction(0,0,0)
+    val rangeFunction2 = RangeFunction(50, 98, 2)
+    val rangeFunction3 = RangeFunction(52, 50, 48)
+    val rangesFunctions = Seq(rangeFunction1, rangeFunction2, rangeFunction3)
+    val resource = Resource(rangesFunctions, Section.Soil)
+
+    val result1 = Resource.transformTheNumber(0, rangesFunctions)
+
+    assertEquals(result1, 0L)
+
+    val result2 = Resource.transformTheNumber(48, rangesFunctions)
+
+    assertEquals(result2, 48L)
+
+
+    val result3 = Resource.transformTheNumber(100, rangesFunctions)
+    assertEquals(result3, 100L)
+
+    val result4 = Resource.transformTheNumber(99, rangesFunctions)
+
+    assertEquals(result4, 51L)
+
+  }
+
+  test("testing the water light transformation for seed 14"){
+
+    val rangeFunction1 = RangeFunction(88L,  18L,  7L)
+    val rangeFunction2 = RangeFunction(18L, 25L, 70L)
+    val rangesFunctions = Seq(rangeFunction1, rangeFunction2)
+    val resource = Resource(rangesFunctions, Section.Light)
+
+    val result1 = Resource.transformTheNumber(49L, rangesFunctions)
+
+    assertEquals(result1, 42L)
+
+
+
+  }
+
+  test("testing the fertilizer water  transformation for seed 14") {
+
+    val rangeFunction1 = RangeFunction(49L, 53L, 8L)
+    val rangeFunction2 = RangeFunction(0L, 11L, 42L)
+    val rangeFunction3 = RangeFunction(42L, 0L, 7L)
+    val rangeFunction4 = RangeFunction(57L, 7L, 4L)
+    val rangesFunctions = Seq(rangeFunction1, rangeFunction2, rangeFunction3, rangeFunction4)
+    val resource = Resource(rangesFunctions, Section.Water)
+
+    val result1 = Resource.transformTheNumber(53L, rangesFunctions)
+
+    assertEquals(result1, 49L)
+
+
+  }
+
+  test("testing the findTheLocation method"){
+
+    val almanac = ReadingFile.parseAlmanac("exampleFile")
+    val location2 = Almanac.findTheLocation(14L, almanac.resources)
+    assertEquals(location2, 43L)
+
+  }
+
 
 }
