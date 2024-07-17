@@ -3,18 +3,19 @@ import scala.io.Source
 
 object ReadingFile {
 
-  
+
   def parseAlmanac(filePath: String): Almanac =
 
     val lines = Source.fromFile(filePath).getLines().toList
-    println(lines)
+    
+    
 
     val seedLine = lines.head
     val seeds = seedLine.split(" ").drop(1).map(_.toLong).toList
 
     val sections = lines.tail.mkString("\n").split("\n\n").map(_.trim).toList
 
-    val resources = sections.flatMap { section =>
+    val resources = sections.map { section =>
       val lines = section.split("\n")
       val sectionType = lines.head match {
         case "seed-to-soil map:" => Section.Soil
@@ -26,29 +27,18 @@ object ReadingFile {
         case "humidity-to-location map:" => Section.Location
       }
 
-      splittingToResources(lines, sectionType)
+      splittingToResources(lines.tail, sectionType)
     }
 
     Almanac(seeds, resources)
 
 
-  def splittingToResources(s: Array[String], section: Section): List[Resource] =
-     s.tail.map { entry =>
+  def splittingToResources(s: Array[String], section: Section): Resource =
+    val rangeFunctions =
+       s.map { entry =>
       val Array(destination, source, length) = entry.split(" ").map(_.toLong)
-      RangeFunction(destination, source, length)
-      }.map{ rangeFunction => 
-       Resource(Seq(rangeFunction), section)
-     }.toList
-
-
-  def main(args: Array[String]): Unit = {
-    val filePath = "exampleFile"
-    val almanac = parseAlmanac(filePath)
-    println(almanac.resources)
-  }
-
-
-
+      RangeFunction(destination, source, length)}.toSeq
+    Resource(rangeFunctions, section)
 
 
 }

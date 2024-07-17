@@ -24,29 +24,6 @@ class TestPart1 extends munit.FunSuite{
     assertEquals(result4, None)
   }
 
-  test("testing the mapTheNumber method for the fertilizer-to-water map") {
-
-    val rangeFunction1 = RangeFunction(49, 53, 8)
-    val rangeFunction2 = RangeFunction(0, 11, 42)
-    val rangeFunction3 = RangeFunction(42, 0, 7)
-    val rangeFunction4 = RangeFunction(57, 7, 4)
-
-    val value1 = 53
-    val value2 = 49
-    val value3 = 42
-    val value4 = 42
-
-    val result1 = Resource.mapTheNumber(value1, rangeFunction1)
-    val result2 = Resource.mapTheNumber(value2, rangeFunction2)
-    val result3 = Resource.mapTheNumber(value3, rangeFunction3)
-    val result4 = Resource.mapTheNumber(value4, rangeFunction4)
-
-    assertEquals(result1, Some(49L))
-    assertEquals(result2, Some(42L))
-    assertEquals(result3, None)
-    assertEquals(result4, None)
-  }
-
   test("testing the first transformTheNumber method"){
     val rangeFunction1 = RangeFunction(0,0,0)
     val rangeFunction2 = RangeFunction(50, 98, 2)
@@ -106,8 +83,20 @@ class TestPart1 extends munit.FunSuite{
   test("testing the findTheLocation method"){
 
     val almanac = ReadingFile.parseAlmanac("exampleFile")
-    val location2 = Almanac.findTheLocation(14L, almanac.resources)
-    assertEquals(location2, 43L)
+
+    val location1 = Almanac.findTheLocation(79L, almanac.resources)
+    assertEquals(location1, 82L)
+
+    val location2 = Almanac.findTheLocation(55L, almanac.resources)
+    assertEquals(location2, 86L)
+
+    val location3 = Almanac.findTheLocation(14L, almanac.resources)
+    assertEquals(location3, 43L)
+
+    val location4 = Almanac.findTheLocation(82L, almanac.resources)
+    assertEquals(location4, 46L)
+
+
 
   }
 

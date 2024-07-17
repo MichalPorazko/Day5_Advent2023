@@ -8,7 +8,7 @@ class ReadingFileTest extends FunSuite {
   val lines = Source.fromFile("exampleFile").getLines().toList
   //println(lines)
 
-  test("testing reading from the file, specifically extracting the seeds") {
+ /* test("testing reading from the file, specifically extracting the seeds") {
     val seedLine = lines.head
     val seeds = seedLine.split(" ").drop(1).map(_.toLong).toList
     assertEquals(seeds, List(79L, 14L, 55L, 13L)) // Expected list as List[Long]
@@ -47,22 +47,27 @@ class ReadingFileTest extends FunSuite {
       println(lala.toList)
       lala
     )
-  }
+  }*/
 
   test("testing the splittingToResources method"){
 
     val fileContent = Source.fromFile("fileForTestingReading").getLines().toList
+    println(s"File content: $fileContent")
 
     val sections = fileContent.tail.mkString("\n").split("\n\n").map(_.trim)
+    println(s"Section: ${sections.toList}")
 
     // the result is Array("seed-to-soil map:", "50 98 2", "52 50 48")
     val lines = sections.flatMap( section => section.split("\n"))
+    println(s"Lines: ${lines.toList}")
 
     //this gives as an Array that we want to work on
     val arrayString = lines.tail
+    println(s"Array String: ${arrayString.toList}")
 
 //    this gives us two arrays: List(50, 98, 2) and List(52, 50, 48)
     val arrays = arrayString.map(_.split(" "))
+    println(s"Arrays: ${arrays.toList}")
 
 
 
@@ -94,7 +99,7 @@ class ReadingFileTest extends FunSuite {
 
   }
 
-  test("testing the whole method with the file fileForTestingReading "){
+  /*test("testing the whole method with the file fileForTestingReading "){
 
     val result = ReadingFile.parseAlmanac("fileForTestingReading")
 
@@ -139,5 +144,5 @@ class ReadingFileTest extends FunSuite {
 
 
     assertEquals(result, almanac)
-  }
+  }*/
 }

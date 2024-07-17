@@ -1,0 +1,74 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/mike/Desktop/Scala/Day7_Advent2023/target/scala-3.3.3/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/mike/Desktop/Scala/Day7_Advent2023/target/scala-3.3.3/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package$RangeFunction$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package$SeedsRange$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Seeds.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Seeds$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Property$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Property.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReadingFile.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fun.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReadingFile$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resources$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resources$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac$$anon$1.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package$RangeFunction$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind$$anon$1.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap$$anon$2.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SeedsRange$package$SeedsRange$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Seeds.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Seeds$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Property$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section$$anon$1.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Property.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RangeFunction$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resource.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceKind.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ResourceMap.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Almanac$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReadingFile.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fun.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReadingFile$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resources$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Section.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Resources$package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/mike/Desktop/Scala/Day7_Advent2023/target/scala-3.3.3/classes.bak[0m
